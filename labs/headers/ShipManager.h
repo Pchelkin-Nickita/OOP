@@ -14,11 +14,11 @@ public:
 
     void set_ship(Battlefield& field, int length, int x, int y, Orientation orient);
 
-    bool end_of_setting();
+    bool endOfSetting();
 
-    void setting_info();
+    void settingInfo();
 
     bool updateInfo();
 
-    bool game_over();
+    bool gameOver();
 };
