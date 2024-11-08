@@ -9,7 +9,7 @@ ShipManager::ShipManager(int* number_of_ships) {
     }
 }
 
-void ShipManager::set_ship(Battlefield& field, int length, int x, int y, Orientation orient) {
+void ShipManager::setShip(Battlefield& field, int length, int x, int y, Orientation orient) {
     if (length < 1 and length > 4) {
         std::cout << "Wrong length for the ship!\n";
         return;
@@ -27,14 +27,14 @@ void ShipManager::set_ship(Battlefield& field, int length, int x, int y, Orienta
     }
 }
 
-bool ShipManager::end_of_setting() {
+bool ShipManager::endOfSetting() {
     for (int i = 1; i <= 4; i++)
         if (inactive_ships[i].size() != 0)
             return false;
     return true;
 }
 
-void ShipManager::setting_info() {
+void ShipManager::settingInfo() {
     for (int i = 1; i <= 4; i++)
         std::cout << i << ": " << inactive_ships[i].size() << std::endl;
 }
@@ -50,7 +50,7 @@ bool ShipManager::updateInfo() {
     return false;
 }
 
-bool ShipManager::game_over() {
+bool ShipManager::gameOver() {
     updateInfo();
     for (int i = 1; i <= 4; i++)
         if (active_ships[i].size() != 0)

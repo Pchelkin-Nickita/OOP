@@ -43,7 +43,7 @@ public:
 
     CellStatus getState(int x, int y) const;
     
-    bool scanner(int x, int y) const;
+    bool getVicinity(int x, int y) const;
 
     bool setShip(Ship& ship, int x, int y, Orientation orient);
 

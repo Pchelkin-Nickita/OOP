@@ -13,7 +13,7 @@ int main() {
         for (int i = 0; i < 4; i++)
             std::cin >> a[i];
         ShipManager manager(a);
-        while (!manager.end_of_setting()) {
+        while (!manager.endOfSetting()) {
             std::cout << "=========\n";
             int length;
             char o;
@@ -23,14 +23,14 @@ int main() {
                 orient = Orientation::HORIZOTNTAL;
             else
                 orient = Orientation::VERTICAL;
-            manager.set_ship(field1, length, m, n, orient);
-            manager.setting_info();
+            manager.setShip(field1, length, m, n, orient);
+            manager.settingInfo();
             field1.print();
         }
         AbilityManager ab_manager;
         IArgs* args;
         std::pair<int, int> coords{ 0, 0 };
-        while (!manager.game_over()) {
+        while (!manager.gameOver()) {
             std::cout << "=========\n";
             std::cin >> m;
             if (m == 1) {

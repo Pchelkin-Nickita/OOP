@@ -82,7 +82,7 @@ CellStatus Battlefield::getState(int x, int y) const {
     }
 }
 
-bool Battlefield::scanner(int x, int y) const {
+bool Battlefield::getVicinity(int x, int y) const {
     for (int i = -1; i < 2; i++)
         for (int j = -1; j < 2; j++)
             if (getState(x + i, y + j) == CellStatus::SHIP)
