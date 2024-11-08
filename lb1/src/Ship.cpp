@@ -1,4 +1,4 @@
-#include "Ship.h"
+#include "../headers/Ship.h"
 
 
 SegmentStatus Ship::Segment::getStatus() const {
