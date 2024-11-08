@@ -1,4 +1,4 @@
-#include "ShipManager.h"
+#include "../headers/ShipManager.h"
 #include <iostream>
 
 ShipManager::ShipManager(int* number_of_ships) {
