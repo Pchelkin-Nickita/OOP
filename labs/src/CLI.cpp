@@ -1,4 +1,4 @@
-#include "CLI.h"
+#include "../CLI.h"
 
 
 ICommand* CLIInput::readCommand(bool& ability_is_used) {
