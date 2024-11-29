@@ -1,4 +1,4 @@
-#include "Ship.h"
+#include "../Ship.h"
 
 
 Ship::Segment::Segment(int state) {
