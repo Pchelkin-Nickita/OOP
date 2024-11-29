@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "../Game.h"
 
 Game::Game(GameSettings& settings) : number_of_ships(settings.number_of_ships) {
 	player.field = Battlefield(settings.length, settings.width, true);
