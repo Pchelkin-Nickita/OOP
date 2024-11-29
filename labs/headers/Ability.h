@@ -34,7 +34,7 @@ public:
     void useAbility() override{
         for (int i = 0; i < 2; i++)
             for (int j = 0; j < 2; j++)
-                if (field->getState(coords.first + i, coords.second + j) == CellStatus::SHIP) {
+                if (field->getCellState(coords.first + i, coords.second + j) == CellStatus::SHIP) {
                     std::cout << "Ship is on the area!!\n";
                     return;
                 }
@@ -51,7 +51,7 @@ public:
         std::vector<Ship*> ships_to_attack;
         for(int i = 1; i <= 4; i++)
             for (int j = 0; j < manager->active_ships[i].size(); j++)
-                ships_to_attack.push_back(&manager->active_ships[i][j]);
+                ships_to_attack.push_back(&manager->active_ships[i][j].first);
         Ship* ship_to_attack = ships_to_attack[rand() % ships_to_attack.size()];
         std::vector<Ship::Segment*> segments_to_attack;
         for (int i = 0; i < ship_to_attack->size(); i++)

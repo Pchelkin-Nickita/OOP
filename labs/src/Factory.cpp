@@ -1,4 +1,4 @@
-#include "../headers/Factory.h"
+#include "Factory.h"
 
 
 IAbility& Factory::getAbility() {

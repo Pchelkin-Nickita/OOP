@@ -1,4 +1,4 @@
-#include "../headers/AbilityManager.h"
+#include "AbilityManager.h"
 
 
 AbilityManager::AbilityManager() {
@@ -26,18 +26,28 @@ void AbilityManager::createAbility() {
 }
 
 void AbilityManager::useAbility(IArgs& args) {
-    Factory& visitor = *(new Factory);
-    args.acceptVisitor(visitor);
-    IAbility& ability = visitor.getAbility();
-    ability.useAbility();
-    abilities.pop();
-    delete& visitor;
-    delete& ability;
+    try {
+        abilities.pop();
+        Factory& visitor = *(new Factory);
+        args.acceptVisitor(visitor);
+        IAbility& ability = visitor.getAbility();
+        ability.useAbility();
+
+        delete& visitor;
+        delete& ability;
+    }
+    catch (...) {
+        std::cout << "There is no available ability!\n";
+    }
+    
 }
 
 Ability AbilityManager::viewAbility() const {
-    if (abilities.size() == 0) {
-        throw std::length_error("There is no available ability!\n");
+    try {
+        return abilities.front();
     }
-    return abilities.front();
+    catch(...){
+        std::cout << "There is no available ability!\n";
+    }
+    
 }

@@ -4,8 +4,8 @@
 #define HEALTHY_SEGMENT_REGISTER 'O'
 #define DAMAGED_SEGMENT_REGISTER 'X'
 #define DESTROYED_SEGMENT_REGISTER '.'
-#define EMPTY_REGISTER '*'
-#define MISS_REGISTER ' '
+#define EMPTY_REGISTER ' '
+#define INVISIBLE_REGISTER '*'
 #define UNSIGNED_REGISTER '/'
 
 
@@ -17,6 +17,7 @@ class Battlefield {
         bool was_attacked = false;
     public:
         Cell() = default;
+        Cell(bool was_attacked);
 
         CellStatus getState() const;
 
@@ -26,30 +27,38 @@ class Battlefield {
 
         void setSegment(Ship::Segment* segment);
 
-        void attack(bool& is_double_damage_active);
+        bool attack(bool& is_double_damage_active);
+
+        std::string getCellMap();
     };
 private:
     std::vector<std::vector<Cell>> field;
+    bool is_double_damage_active = false;
+    bool is_visible = false;
+public:
     int length;
     int width;
-    bool is_double_damage_active = false;
-public:
     Battlefield() = default;
-    Battlefield(const int length, const int width);
+    Battlefield(const int length, const int width, bool is_visible);
+    Battlefield(const int length, const int width, std::vector<std::vector<bool>> field, bool is_visible);
     Battlefield(const Battlefield& copy);
     Battlefield(Battlefield&& moved);
     Battlefield& operator = (const Battlefield& copy);
     Battlefield& operator = (Battlefield&& moved);
 
-    CellStatus getState(int x, int y) const;
+    CellStatus getCellState(int x, int y) const;
     
-    bool getVicinity(int x, int y) const;
+    bool isValidPosition(int x, int y, int length, Orientation orient) const;
 
-    bool setShip(Ship& ship, int x, int y, Orientation orient);
+    bool placeShip(Ship& ship, int x, int y, Orientation orient);
 
     void setDoubleDamage();
 
-    void attack(int x, int y);
+    bool attack(int x, int y);
+
+    void clear();
 
     void print() const;
+
+    std::string getFieldMap();
 };

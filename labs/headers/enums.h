@@ -1,8 +1,8 @@
 #pragma once
 
 enum Orientation {
-    VERTICAL,
-    HORIZOTNTAL
+    VERTICAL = 0,
+    HORIZONTAL = 1
 };
 
 enum SegmentStatus {
@@ -12,7 +12,6 @@ enum SegmentStatus {
 };
 
 enum CellStatus {
-    UNNKOWN,
     EMPTY,
     SHIP,
     UNSIGNED
