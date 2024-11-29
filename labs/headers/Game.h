@@ -21,11 +21,10 @@ private:
 	void spawnOpp();
 	void oppsTurn();
 	void gameOver();
+	void printMessage(std::string message);
 public:
 	Game(GameSettings& settings);
-
-	void printMessage(std::string message);
-
+	
 	void printInfo();
 
 	void printSettingInfo();

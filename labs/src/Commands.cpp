@@ -1,4 +1,4 @@
-#include "Commands.h"
+#include "../Commands.h"
 
 
 Attack::Attack(std::pair<int, int> coords) : coords(coords) {}

@@ -1,4 +1,4 @@
-#include "GameController.h"
+#include "../GameController.h"
 
 
 GameController::GameController(Game& game) : game(game) {}

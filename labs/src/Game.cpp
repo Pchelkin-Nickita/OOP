@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "../Game.h"
 
 Game::Game(GameSettings& settings) : number_of_ships(settings.number_of_ships) {
 	player.field = Battlefield(settings.length, settings.width, true);
@@ -24,7 +24,7 @@ void Game::printInfo(){
 
 void Game::placeShips() {
 	printMessage("Set your ships:\n");
-	while (player.manager.endOfSetting()) { // ! НЕ ЗАБЫТЬ ВЕРНУТЬ
+	while (!player.manager.endOfSetting()) {
 		printSettingInfo();
 		player.field.print();
 		int length, x, y;
@@ -39,20 +39,6 @@ void Game::placeShips() {
 			// throw std::invalid_argument();    ;обработчик ошибок There is only two genders!
 		player.manager.placeShip(player.field, length, x - 1, y - 1, orient);
 		std::cout << "=========\n";
-	}
-	
-	int random_position_x, random_position_y;
-	Orientation random_orientation;
-	for (int length = 1; length <= 4; length++) {
-		for (int j = 0; j < number_of_ships[length]; j++) {
-			do {
-				random_position_x = rand() % opp.field.length;
-				random_position_y = rand() % opp.field.width;
-				random_orientation = (rand() % 2 == 0 ? VERTICAL : HORIZONTAL); // случайно выбираем направление корабля
-			} while (!player.field.isValidPosition(random_position_x, random_position_y, length, random_orientation)); // проверяем, можно ли поставить корабль на это место
-
-			player.manager.placeShip(player.field, length, random_position_x, random_position_y, random_orientation);
-		}
 	}
 }
 
