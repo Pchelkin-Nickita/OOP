@@ -1,4 +1,4 @@
-#include "ShipManager.h"
+#include "../ShipManager.h"
 #include <iostream>
 
 ShipManager::ShipManager(std::map<unsigned, unsigned> number_of_ships) {
