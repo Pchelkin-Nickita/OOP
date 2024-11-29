@@ -1,4 +1,4 @@
-#include "GameState.h"
+#include "../GameState.h"
 
 std::string GameState::getGameMap() const {
     return player->field.getFieldMap() + player->manager.getShipsMap() + opp->field.getFieldMap() + opp->manager.getShipsMap();
