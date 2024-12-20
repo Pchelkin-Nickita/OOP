@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Ability">
+      <UniqueIdentifier>{93fe5bdf-d34b-48f9-8a9c-406efd585f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Game">
+      <UniqueIdentifier>{c07dd470-6ef1-400f-9f40-15895031f11f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GameElements">
+      <UniqueIdentifier>{4a539117-dc72-4c47-befe-2ffed23d8d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Ability">
+      <UniqueIdentifier>{0ce387a0-69f0-4e87-98a8-b496a2d04c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game">
+      <UniqueIdentifier>{2eec4d58-83c7-4e45-b9bf-646d42984a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\GameElement">
+      <UniqueIdentifier>{105f2e46-383f-400c-be0c-2d47dd3a6108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GameManager">
+      <UniqueIdentifier>{a2fb3296-871e-41db-b292-debd33e560c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\GameManager">
+      <UniqueIdentifier>{8e0fbaea-b8ca-43dd-acd4-c642d267325a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="AbilityManager.cpp">
+      <Filter>Исходные файлы\Ability</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>Исходные файлы\Ability</Filter>
+    </ClCompile>
+    <ClCompile Include="Battlefield.cpp">
+      <Filter>Исходные файлы\GameElement</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>Исходные файлы\GameElement</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipManager.cpp">
+      <Filter>Исходные файлы\GameElement</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Исходные файлы\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CLI.cpp">
+      <Filter>Исходные файлы\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands.cpp">
+      <Filter>Исходные файлы\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Ability.cpp">
+      <Filter>Исходные файлы\Ability</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawField.cpp">
+      <Filter>Исходные файлы\GameManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ability.h">
+      <Filter>Файлы заголовков\Ability</Filter>
+    </ClInclude>
+    <ClInclude Include="AbilityManager.h">
+      <Filter>Файлы заголовков\Ability</Filter>
+    </ClInclude>
+    <ClInclude Include="Args.h">
+      <Filter>Файлы заголовков\Ability</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>Файлы заголовков\Ability</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Battlefield.h">
+      <Filter>Файлы заголовков\GameElements</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h">
+      <Filter>Файлы заголовков\GameElements</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipManager.h">
+      <Filter>Файлы заголовков\GameElements</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>Файлы заголовков\GameElements</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Файлы заголовков\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands.h">
+      <Filter>Файлы заголовков\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputVar.h">
+      <Filter>Файлы заголовков\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameVisualizer.h">
+      <Filter>Файлы заголовков\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawField.h">
+      <Filter>Файлы заголовков\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Файлы заголовков\GameManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="commands.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
+    <Text Include="save.txt" />
+  </ItemGroup>
+</Project>

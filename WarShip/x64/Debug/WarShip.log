@@ -1,0 +1,5 @@
+﻿  Commands.cpp
+  main.cpp
+C:\Личное\Лабы\WarShip\main.cpp(6,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  WarShip.vcxproj -> C:\Личное\Лабы\WarShip\x64\Debug\WarShip.exe
